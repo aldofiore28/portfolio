@@ -6,6 +6,7 @@ $cursiveFont: 'Kalam', cursive;
 $primaryColor: #E0E5EE;
 $secondaryColor: #B4B7BF;
 $textColor: #2D2E2F;
+$breakpointXS: 400px;
 $breakpointSM: 576px;
 $breakpointMD: 768px;
 $breakpointLG: 992px;
@@ -41,12 +42,12 @@ a {
       background-color: $secondaryColor;
     }
     @media screen and (max-width: $breakpointMD) {
-      padding: 10px;
       font-size: 2.2rem;
+      padding: 15px 0;
     }
     @media screen and (max-width: $breakpointSM) {
-      padding: 10px;
       font-size: 1.8rem;
+      padding: 15px 0;
     }
   }
 
@@ -85,7 +86,12 @@ a {
     list-style: none;
     padding: 0;
     @media screen and (max-width: $breakpointMD) {
-      margin-left: 10px;
+      width: 95%;
+      margin: 0 auto;
+      overflow: auto;
+    }
+    @media screen and (max-width: $breakpointSM) {
+      width: 100%;
     }
     &::after {
       content: ' ';
@@ -99,7 +105,8 @@ a {
     }
     .nav-item {
       @media screen and (max-width: $breakpointMD) {
-        display: inline-block;
+        float: left;
+        width: 25%;
       }
     }
   }
@@ -136,6 +143,9 @@ a {
     margin: 0;
     @media screen and (max-width: $breakpointSM) {
       font-size: 5rem;
+    }
+    @media screen and (max-width: $breakpointSM) {
+      font-size: 4rem;
     }
   }
   .subtitle {
