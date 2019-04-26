@@ -23,7 +23,7 @@ html {
 
 .container {
   width: 95%;
-  max-width: 1000px;
+  max-width: 1200px;
   padding: 0 10px;
   margin: 0 auto;
 }
@@ -54,6 +54,26 @@ a {
   &.social-link {
     font-size: 2.2rem;
     color: $textColor;
+  }
+}
+
+h1, h3 {
+  font-family: $cursiveFont;
+  &.title {
+    font-family: $cursiveFont;
+    font-size: 6rem;
+    margin: 0;
+    @media screen and (max-width: $breakpointSM) {
+      font-size: 5rem;
+    }
+    @media screen and (max-width: $breakpointSM) {
+      font-size: 4rem;
+    }
+  }
+
+  &.title-about-me-section {
+    font-size: 4rem;
+    margin: 0 0 20px 0;
   }
 }
 
@@ -151,8 +171,24 @@ a {
   .subtitle {
     font-family: $primaryFont;
     font-size: 2rem;
+    margin-bottom: 30px;
     span {
       font-weight: 400;
+    }
+  }
+
+  .main-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-me-section {
+    margin-top: 30px;
+    p {
+      font-family: $primaryFont;
+      font-size: 1.8rem;
+      text-align: justify;
+      margin-bottom: 10px;
     }
   }
 }
