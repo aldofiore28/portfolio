@@ -229,17 +229,10 @@ p {
 
   .about-me-section {
     margin-top: 30px;
-    p {
-      font-family: $primaryFont;
-      font-size: 1.8rem;
-      text-align: justify;
-      margin-bottom: 10px;
-    }
   }
 
   .projects {
     text-align: left;
-    padding-bottom: 100px;
     overflow: auto;
     .project {
       float: left;
@@ -257,8 +250,6 @@ p {
 
       .project-text {
         float: left;
-        height: 160px;
-        position: relative;
         border-bottom: 2px solid $secondaryColor;
         border-left: 2px solid $secondaryColor;
         border-right: 2px solid $secondaryColor;
