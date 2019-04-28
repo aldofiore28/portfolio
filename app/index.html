@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="css/normalize.css">
     <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <script src="js/es5/formValidation.js" defer></script>
 </head>
 <body>
     <nav class="side-navbar">
@@ -155,9 +156,10 @@
                     <p class="form-after-title">Don't hesitate to contact me</p>
                     <form id="form-email" method="POST" action="index.php">
                         <label for="email">Email:</label>
-                        <input id="email" type="text" name="email" placeholder="Email..." />
+                        <input id="email" type="text" name="email" placeholder="Email..." data-type="email" />
                         <label for="title-email">Title:</label>
-                        <input id="title-email" type="text" name="title-email" placeholder="Title..." />
+                        <input id="title-email" type="text" name="title-email" placeholder="Title..."
+                               data-type="title" />
                         <label for="content-email">Content:</label>
                         <textarea id="content-email" form="form-email" name="content-email"
                                   placeholder="Content..."></textarea>

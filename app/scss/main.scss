@@ -26,6 +26,12 @@ html {
   max-width: 1200px;
   padding: 0 10px;
   margin: 0 auto;
+  overflow: auto;
+}
+
+.error-message {
+  color: red;
+  font-family: $primaryFont;
 }
 
 a {
@@ -301,6 +307,10 @@ p {
           font-family: $primaryFont;
           font-size: 1.4rem;
           opacity: 0.5;
+        }
+
+        &.error {
+          border: 1px solid red;
         }
       }
       textarea {
