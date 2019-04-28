@@ -147,6 +147,26 @@
                 </article>
             </section>
         </div>
+        <footer class="contact-info">
+            <div class="container">
+                <h1 class="contact-info-title">Contact</h1>
+                <section class="form-email">
+                    <h3 class="email-form-title">Want to work with me?</h3>
+                    <p class="form-after-title">Don't hesitate to contact me</p>
+                    <form id="form-email" method="POST" action="index.php">
+                        <label for="email">Email:</label>
+                        <input id="email" type="text" name="email" placeholder="Email..." />
+                        <label for="title-email">Title:</label>
+                        <input id="title-email" type="text" name="title-email" placeholder="Title..." />
+                        <label for="content-email">Content:</label>
+                        <textarea id="content-email" form="form-email" name="content-email"
+                                  placeholder="Content..."></textarea>
+                        <button type="submit" name="send-email">Send</button>
+                    </form>
+                </section>
+                <section class="contact-info"></section>
+            </div>
+        </footer>
     </main>
 </body>
 </html>

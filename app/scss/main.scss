@@ -74,11 +74,12 @@ a {
 }
 
 h1, h3 {
+  color: $textColor;
   font-family: $cursiveFont;
+  margin: 0;
   &.title {
     font-family: $cursiveFont;
     font-size: 6rem;
-    margin: 0;
     @media screen and (max-width: $breakpointSM) {
       font-size: 5rem;
     }
@@ -101,10 +102,20 @@ h1, h3 {
     margin: 5px 0;
     font-size: 2rem;
   }
+
+  &.contact-info-title {
+    padding-top: 20px;
+    font-size: 4rem;
+  }
+
+  &.email-form-title {
+    font-size: 2rem;
+  }
 }
 
 p {
   font-family: $primaryFont;
+  color: $textColor;
 
   &.about-me-text {
     font-size: 1.8rem;
@@ -119,6 +130,10 @@ p {
   &.tags {
     text-align: right;
     margin-top: 5px;
+    font-size: 1.4rem;
+  }
+
+  &.form-after-title {
     font-size: 1.4rem;
   }
 }
@@ -197,6 +212,7 @@ p {
   text-align: center;
   background-image: url("../images/background-image.png");
   background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   @media screen and (max-width: $breakpointMD) {
     padding: 0;
@@ -254,6 +270,59 @@ p {
         border-left: 2px solid $secondaryColor;
         border-right: 2px solid $secondaryColor;
         padding: 5px;
+      }
+    }
+  }
+
+  .contact-info {
+    margin-top: 20px;
+    background-color: $secondaryColor;
+    overflow: auto;
+    .form-email {
+      float: left;
+      width: 50%;
+      padding: 10px 0;
+      label {
+        text-align: left;
+        display: block;
+        font-size: 2rem;
+        font-family: $primaryFont;
+        margin-bottom: 5px;
+      }
+      input {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        height: 30px;
+        border: 1px solid $primaryColor;
+        border-radius: 5px;
+
+        &::placeholder {
+          font-family: $primaryFont;
+          font-size: 1.4rem;
+          opacity: 0.5;
+        }
+      }
+      textarea {
+        display: block;
+        width: 100%;
+        height: 200px;
+        border-radius: 5px;
+        border: 1px solid $primaryColor;
+        resize: none;
+        &::placeholder {
+          font-family: $primaryFont;
+          font-size: 1.4rem;
+          opacity: 0.5;
+        }
+      }
+      button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-family: $primaryFont;
+        font-size: 1.2rem;
+        float: right;
       }
     }
   }
