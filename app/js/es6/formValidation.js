@@ -43,7 +43,6 @@ function removeErrorHighlighter (inputs, content) {
 
 const form = document.getElementById('form-email')
 form.addEventListener('submit', event => {
-    event.preventDefault()
     let error = false
     let inputs = document.querySelectorAll('input')
     let content = document.getElementById('content-email')
@@ -95,5 +94,8 @@ form.addEventListener('submit', event => {
     }
     if (message.length !== 0) {
         showMessage(message, content)
+    }
+    if (error) {
+        event.preventDefault()
     }
 })
