@@ -26,6 +26,15 @@ html {
   max-width: 1200px;
   padding: 0 10px;
   margin: 0 auto;
+  overflow: auto;
+}
+
+.error-message {
+  color: red;
+  font-family: sans-serif;
+  text-align: left;
+  font-size: 1.2rem;
+  margin: 5px 0;
 }
 
 a {
@@ -96,6 +105,7 @@ h1, h3 {
   &.project-section-title {
     text-align: center;
     font-size: 4rem;
+    margin: 30px 0 20px 0;
   }
 
   &.project-title {
@@ -106,10 +116,6 @@ h1, h3 {
   &.contact-info-title {
     padding-top: 20px;
     font-size: 4rem;
-  }
-
-  &.email-form-title {
-    font-size: 2rem;
   }
 }
 
@@ -133,8 +139,11 @@ p {
     font-size: 1.4rem;
   }
 
-  &.form-after-title {
-    font-size: 1.4rem;
+  &.sub-title-contact {
+    font-size: 1.6rem;
+    span {
+      font-weight: 700;
+    }
   }
 }
 
@@ -212,8 +221,8 @@ p {
   text-align: center;
   background-image: url("../images/background-image.png");
   background-position: center;
-  background-attachment: fixed;
   background-repeat: no-repeat;
+  background-size: cover;
   @media screen and (max-width: $breakpointMD) {
     padding: 0;
     margin: 85px 0 0 0;
@@ -250,14 +259,21 @@ p {
   .projects {
     text-align: left;
     overflow: auto;
+
     .project {
       float: left;
       padding: 5px;
       width: 33.3%;
       height: auto;
+
       @media screen and (max-width: $breakpointXL) {
         width: 50%;
       }
+
+      @media screen and (max-width:  $breakpointMD) {
+        width: 100%;
+      }
+
       .project-image {
         width: 100%;
         float: left;
@@ -266,6 +282,8 @@ p {
 
       .project-text {
         float: left;
+        width: 100%;
+        height: 180px;
         border-bottom: 2px solid $secondaryColor;
         border-left: 2px solid $secondaryColor;
         border-right: 2px solid $secondaryColor;
@@ -275,24 +293,29 @@ p {
   }
 
   .contact-info {
-    margin-top: 20px;
-    background-color: $secondaryColor;
-    overflow: auto;
+    margin-top: 40px;
+    background-color: lighten($primaryColor, 3);
+
     .form-email {
-      float: left;
-      width: 50%;
+      margin: 0 auto;
+      width: 450px;
       padding: 10px 0;
+      overflow: auto;
+      @media screen and (max-width:  $breakpointMD) {
+        width: 100%;
+      }
+
       label {
         text-align: left;
         display: block;
         font-size: 2rem;
         font-family: $primaryFont;
-        margin-bottom: 5px;
+        margin: 10px 0 5px 0;
       }
+
       input {
         display: block;
         width: 100%;
-        margin-bottom: 10px;
         height: 30px;
         border: 1px solid $primaryColor;
         border-radius: 5px;
@@ -302,7 +325,17 @@ p {
           font-size: 1.4rem;
           opacity: 0.5;
         }
+
+        &.error {
+          border: 1px solid red;
+        }
+
+        &[type="text"] {
+          font-family: sans-serif;
+          font-size: 1.4rem;
+        }
       }
+
       textarea {
         display: block;
         width: 100%;
@@ -310,19 +343,60 @@ p {
         border-radius: 5px;
         border: 1px solid $primaryColor;
         resize: none;
+        font-family: sans-serif;
+        font-size: 1.4rem;
+
         &::placeholder {
           font-family: $primaryFont;
           font-size: 1.4rem;
           opacity: 0.5;
         }
+
+        &.error {
+          border: 1px solid red;
+        }
       }
+
       button {
         margin-top: 10px;
         padding: 10px 20px;
         border-radius: 5px;
+        background-color: transparent;
+        border: 1px solid $secondaryColor;
         font-family: $primaryFont;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         float: right;
+        cursor: pointer;
+        transition: background-color .5s;
+
+        &:hover {
+          background-color: $secondaryColor;
+        }
+      }
+    }
+
+    .contact-footer {
+      display: none;
+      @media screen and (max-width: $breakpointMD) {
+        display: block;
+      }
+      &::before {
+        content: ' ';
+        display: inline-block;
+        border-bottom: 1px solid #000000;
+        opacity: 0.2;
+        width: 40%;
+      }
+
+      .social-footer {
+        list-style: none;
+        margin-top: 20px;
+        padding: 0;
+
+        .social-items {
+          display: inline-block;
+          margin: 0 10px;
+        }
       }
     }
   }
