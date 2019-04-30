@@ -219,10 +219,7 @@ p {
   margin-left: 200px;
   padding-top: 40px;
   text-align: center;
-  background-image: url("../images/background-image2.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: linear-gradient(#FFFFFF, #EEEEEE);
   @media screen and (max-width: $breakpointMD) {
     padding: 0;
     margin: 85px 0 0 0;
@@ -250,6 +247,7 @@ p {
   .main-image {
     width: 100%;
     height: auto;
+    margin-bottom: 30px;
   }
 
   .about-me-section {
@@ -294,7 +292,6 @@ p {
 
   .contact-info {
     margin-top: 40px;
-    background-color: lighten($primaryColor, 3);
 
     .form-email {
       margin: 0 auto;
@@ -396,6 +393,9 @@ p {
         .social-items {
           display: inline-block;
           margin: 0 10px;
+          .social-link {
+            font-size: 2.8rem;
+          }
         }
       }
     }

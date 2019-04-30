@@ -16,16 +16,16 @@
         <img class="profile-image" src="images/profile-picture2.jpg" alt="profile-image" />
         <ul class="navigation">
             <li class="nav-item">
-                <a class="nav-link" href="#">HOME</a>
+                <a class="nav-link" href="#home">HOME</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">ABOUT ME</a>
+                <a class="nav-link" href="#about-me">ABOUT ME</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">PORTFOLIO</a>
+                <a class="nav-link" href="#portfolio">PORTFOLIO</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">CONTACT</a>
+                <a class="nav-link" href="#contact">CONTACT</a>
             </li>
         </ul>
         <ul class="social">
@@ -46,18 +46,18 @@
             </li>
         </ul>
     </nav>
-    <main class="side-content">
+    <main id="home" class="side-content">
         <div class="container">
             <h1 class="title">ALDO FIORE</h1>
             <h3 class="subtitle">full stack <span>web developer</span></h3>
             <img class="main-image" src="images/main-image.jpg" alt="main image">
-            <section class="about-me-section">
+            <section id="about-me" class="about-me-section">
                 <h1 class="title-about-me">ABOUT ME...</h1>
                 <p class="about-me-text">Hello! My name is Aldo and I'm a 23 year old Italian fella from a small town
                     near Rome. I am currently studying at the renowned Mayden Academy in Bath to become a Full Stack web developer. I enjoy the highs and lows of coding, especially the time spent in front of a laptop with a good problem to solve. I particularly love the feeling of creating something, wether a product or a service that people can use. I lean towards back-end development, but as a full-stack trainee, I like to get down with front-end apps and creating styles and pages. I feel confident with PHP, MySQL, Javascript, HTML and CSS, and I just started using Sass and Bootstrap. I also look forward learning other tools and frameworks the course has in store for us to expand our knowledge: Slim and Node.js.</p>
                 <p class="about-me-text">I migrated in the UK for a scenery change and worked in casinos for about 3 years before I moved to Bath. Whilst considering other opportunities I remembered how much I had enjoyed the software development I experienced at high school, so decided to apply for the Mayden Academy to help change my career and life! In my free time I like to cook, as a proud Italian, for my friends and girlfriend. I also love relaxing at home watching movies.</p>
             </section>
-            <section class="projects">
+            <section id="portfolio" class="projects">
                 <h1 class="project-section-title">PROJECTS</h1>
                 <article class="project">
                     <img class="project-image" src="images/pilot_shop.jpg" alt="CMS project">
@@ -117,7 +117,7 @@
                 </article>
             </section>
         </div>
-        <footer class="contact-info">
+        <footer id="contact" class="contact-info">
             <div class="container">
                 <h1 class="contact-info-title">CONTACT</h1>
                 <p class="sub-title-contact">If you are <span>interested</span> to work with me</p>
@@ -125,7 +125,7 @@
                     <form id="form-email" method="POST" action="index.php">
                         <label for="email">Email:</label>
                         <input id="email" type="text" name="email" placeholder="Email..." data-type="email" />
-                        <label for="title-email">Title:</label>
+                        <label for="title-email">Name:</label>
                         <input id="title-email" type="text" name="title-email" placeholder="Title..."
                                data-type="title" />
                         <label for="content-email">Content:</label>
