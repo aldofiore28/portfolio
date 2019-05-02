@@ -1,3 +1,28 @@
+<?php
+require_once 'php/PHPMailer.php';
+require_once 'php/Validate.php';
+require_once 'php/Sanitise.php';
+if (!empty($_POST)) {
+    $inputEmail = $_POST['email'];
+    $inputTitle = $_POST['title-email'];
+    $inputContent = $_POST['content-email'];
+    $validation = new Validate($inputEmail, $inputTitle, $inputContent);
+    $email = new PHPMailer\PHPMailer\PHPMailer();
+    $validData = $validation->validate();
+    $sanitization = new Sanitise($validData);
+    $finalData = $sanitization->sanitise();
+    $email->setFrom($finalData['email'], $finalData['title']);
+    $email->addAddress('aldo.fiore95@gmail.com', 'Aldo Fiore');
+    $email->Subject = 'Hello boy';
+    $email->Body = $finalData['content'];
+    if(!$email->send()) {
+        $errorMessage = '<p class="error-message">The email was not sent! ' . $email->ErrorInfo . '.</p>';
+    } else {
+        $errorMessage = '<p class="success-message">Email sent!</p>';
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -132,6 +157,11 @@
                         <textarea id="content-email" form="form-email" name="content-email"
                                   placeholder="Content..."></textarea>
                         <button type="submit" name="send-email">Send</button>
+                        <?php
+                            if(isset($errorMessage)) {
+                                echo $errorMessage;
+                            }
+                        ?>
                     </form>
                 </section>
                 <section class="contact-footer">
