@@ -6,6 +6,8 @@ if (!empty($_POST)) {
     $inputEmail = $_POST['email'];
     $inputTitle = $_POST['title-email'];
     $inputContent = $_POST['content-email'];
+    $errorMessage = '';
+
     $validation = new Validate($inputEmail, $inputTitle, $inputContent);
     $email = new PHPMailer\PHPMailer\PHPMailer();
     $validData = $validation->validate();
@@ -147,7 +149,7 @@ if (!empty($_POST)) {
                 <h1 class="contact-info-title">CONTACT</h1>
                 <p class="sub-title-contact">If you are <span>interested</span> to work with me</p>
                 <section class="form-email">
-                    <form id="form-email" method="POST" action="index.php">
+                    <form id="form-email" method="POST" action="index.php#form-email">
                         <label for="email">Email:</label>
                         <input id="email" type="text" name="email" placeholder="Email..." data-type="email" />
                         <label for="title-email">Title:</label>
