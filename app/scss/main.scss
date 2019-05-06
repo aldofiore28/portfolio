@@ -31,7 +31,7 @@ html {
 }
 
 .error-message {
-  color: red;
+  color: #FF0000;
   font-family: sans-serif;
   text-align: left;
   font-size: 1.2rem;
@@ -145,6 +145,14 @@ p {
     span {
       font-weight: 700;
     }
+  }
+
+  &.success-message {
+    color: #008000;
+    font-family: sans-serif;
+    text-align: left;
+    font-size: 1.2rem;
+    margin: 5px 0;
   }
 }
 

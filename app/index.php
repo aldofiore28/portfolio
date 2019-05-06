@@ -1,3 +1,30 @@
+<?php
+require_once 'php/PHPMailer.php';
+require_once 'php/Validate.php';
+require_once 'php/Sanitise.php';
+if (!empty($_POST)) {
+    $inputEmail = $_POST['email'];
+    $inputTitle = $_POST['title-email'];
+    $inputContent = $_POST['content-email'];
+    $errorMessage = '';
+
+    $validation = new Validate($inputEmail, $inputTitle, $inputContent);
+    $email = new PHPMailer\PHPMailer\PHPMailer();
+    $validData = $validation->validate();
+    $sanitization = new Sanitise($validData);
+    $finalData = $sanitization->sanitise();
+    $email->setFrom($finalData['email'], $finalData['title']);
+    $email->addAddress('aldo.fiore95@gmail.com', 'Aldo Fiore');
+    $email->Subject = 'Hello boy';
+    $email->Body = $finalData['content'];
+    if(!$email->send()) {
+        $errorMessage = '<p class="error-message">The email was not sent! ' . $email->ErrorInfo . '.</p>';
+    } else {
+        $errorMessage = '<p class="success-message">Email sent!</p>';
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -115,6 +142,20 @@
                         <a class="project-link" href="http://dev.maydenacademy.co.uk/projects/2017/aptitude-test/app/" target="_blank">project</a>
                     </div>
                 </article>
+                <article class="project">
+                    <img class="project-image" src="images/topdog.png" alt="topdog-app">
+                    <div class="project-text">
+                        <h1 class="project-title">TopDog App</h1>
+                        <p class="project-description">
+                            Created an application in PHP using the dog API
+                            to display dog images organised by breed, using
+                            autoload and OOP programming.
+                        </p>
+                        <p class="tags">#PHP #OOP #HTML #CSS</p>
+                        <a class="project-link" href="https://github.com/Mayden-Academy/2019-nmr-TopDog" target="_blank">code</a>
+                        <a class="project-link" href="http://dev.maydenacademy.co.uk/projects/2019Feb/2019-nmr-TopDog/" target="_blank">project</a>
+                    </div>
+                </article>
             </section>
         </div>
         <footer id="contact" class="contact-info">
@@ -122,7 +163,7 @@
                 <h1 class="contact-info-title">CONTACT</h1>
                 <p class="sub-title-contact">If you are <span>interested</span> to work with me</p>
                 <section class="form-email">
-                    <form id="form-email" method="POST" action="index.php">
+                    <form id="form-email" method="POST" action="index.php#form-email">
                         <label for="email">Email:</label>
                         <input id="email" type="text" name="email" placeholder="Email..." data-type="email" />
                         <label for="title-email">Title:</label>
@@ -132,6 +173,11 @@
                         <textarea id="content-email" form="form-email" name="content-email"
                                   placeholder="Content..."></textarea>
                         <button type="submit" name="send-email">Send</button>
+                        <?php
+                            if(isset($errorMessage)) {
+                                echo $errorMessage;
+                            }
+                        ?>
                     </form>
                 </section>
                 <section class="contact-footer">
