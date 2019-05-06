@@ -142,6 +142,20 @@ if (!empty($_POST)) {
                         <a class="project-link" href="http://dev.maydenacademy.co.uk/projects/2017/aptitude-test/app/" target="_blank">project</a>
                     </div>
                 </article>
+                <article class="project">
+                    <img class="project-image" src="images/topdog.png" alt="topdog-app">
+                    <div class="project-text">
+                        <h1 class="project-title">TopDog App</h1>
+                        <p class="project-description">
+                            Created an application in PHP using the dog API
+                            to display dog images organised by breed, using
+                            autoload and OOP programming.
+                        </p>
+                        <p class="tags">#PHP #OOP #HTML #CSS</p>
+                        <a class="project-link" href="https://github.com/Mayden-Academy/2019-nmr-TopDog" target="_blank">code</a>
+                        <a class="project-link" href="http://dev.maydenacademy.co.uk/projects/2019Feb/2019-nmr-TopDog/" target="_blank">project</a>
+                    </div>
+                </article>
             </section>
         </div>
         <footer id="contact" class="contact-info">
