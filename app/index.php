@@ -15,7 +15,7 @@ if (!empty($_POST)) {
     $finalData = $sanitization->sanitise();
     $email->setFrom($finalData['email'], $finalData['title']);
     $email->addAddress('aldo.fiore95@gmail.com', 'Aldo Fiore');
-    $email->Subject = 'Hello boy';
+    $email->Subject = 'Email from portfolio';
     $email->Body = $finalData['content'];
     if(!$email->send()) {
         $errorMessage = '<p class="error-message">The email was not sent! ' . $email->ErrorInfo . '.</p>';
