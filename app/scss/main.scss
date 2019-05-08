@@ -230,8 +230,8 @@ p {
   text-align: center;
   background-image: linear-gradient(#FFFFFF, lighten($primaryColor, 2));
   @media screen and (max-width: $breakpointMD) {
-    padding: 0;
-    margin: 85px 0 0 0;
+    padding: 85px 0 0 0;
+    margin: 0;
   }
   .title {
     font-family: $cursiveFont;
@@ -259,10 +259,11 @@ p {
   }
 
   .about-me-section {
-    margin-top: 30px;
+    padding-top: 70px;
   }
 
   .projects {
+    padding: 50px;
     text-align: left;
     overflow: auto;
 
