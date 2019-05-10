@@ -135,7 +135,7 @@ if (!empty($_POST)) {
                         <p class="project-description">
                             Worked on an aptitude test app for the academy
                             using ES6 and working on an existing code base,
-                            adding features and bug-fixing
+                            adding features and bug-fixing.
                         </p>
                         <p class="tags">#Javascript #Handlebars #HTML #CSS</p>
                         <a class="project-link" href="https://github.com/Mayden-Academy/aptitude-test" target="_blank">code</a>
