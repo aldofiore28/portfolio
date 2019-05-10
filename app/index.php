@@ -137,7 +137,7 @@ if (!empty($_POST)) {
                             using ES6 and working on an existing code base,
                             adding features and bug-fixing
                         </p>
-                        <p class="tags">#Javascript #Handlebards #HTML #CSS</p>
+                        <p class="tags">#Javascript #Handlebars #HTML #CSS</p>
                         <a class="project-link" href="https://github.com/Mayden-Academy/aptitude-test" target="_blank">code</a>
                         <a class="project-link" href="http://dev.maydenacademy.co.uk/projects/2017/aptitude-test/app/" target="_blank">project</a>
                     </div>
@@ -149,7 +149,7 @@ if (!empty($_POST)) {
                         <p class="project-description">
                             Created an application in PHP using the dog API
                             to display dog images organised by breed, using
-                            autoload and OOP programming.
+                            autoloading and OOP programming.
                         </p>
                         <p class="tags">#PHP #OOP #HTML #CSS</p>
                         <a class="project-link" href="https://github.com/Mayden-Academy/2019-nmr-TopDog" target="_blank">code</a>
