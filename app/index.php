@@ -157,7 +157,7 @@ if (!empty($_POST)) {
                     </div>
                 </article>
                 <article class="project">
-                    <img class="project-image" src="images/topdog.png" alt="topdog-app">
+                    <img class="project-image" src="images/todo-app.jpg" alt="topdog-app">
                     <div class="project-text">
                         <h1 class="project-title">TODO app</h1>
                         <p class="project-description">
@@ -166,8 +166,8 @@ if (!empty($_POST)) {
                             with SLIM and following a MVC architecture.
                         </p>
                         <p class="tags">#PHP #OOP #Slim #MVC</p>
-                        <a class="project-link" href="https://github.com/Mayden-Academy/2019-nmr-TopDog" target="_blank">code</a>
-                        <a class="project-link" href="http://dev.maydenacademy.co.uk/projects/2019Feb/2019-nmr-TopDog/" target="_blank">project</a>
+                        <a class="project-link" href="https://github.com/aldofiore28/TODOApp" target="_blank">code</a>
+                        <a class="project-link" href="http://dev.maydenacademy.co.uk/students/2019/feb/aldo/todo-app/public/" target="_blank">project</a>
                     </div>
                 </article>
             </section>
