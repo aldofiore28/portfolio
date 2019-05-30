@@ -81,7 +81,7 @@ if (!empty($_POST)) {
             <section id="about" class="about-me-section">
                 <h1 class="title-about-me">ABOUT ME...</h1>
                 <p class="about-me-text">Hello! My name is Aldo and I'm a 24 year old Italian fella from a small town
-                    near Rome. I am currently studying at the renowned Mayden Academy in Bath to become a Full Stack web developer. I enjoy the highs and lows of coding, especially the time spent in front of a laptop with a good problem to solve. I particularly love the feeling of creating something, whether a product or a service that people can use. I lean towards back-end development, but as a full-stack trainee, I like to get down with front-end apps and creating styles and pages. I feel confident with PHP, MySQL, Javascript, HTML and CSS, and I just started using Sass and Bootstrap. I also look forward learning other tools and frameworks the course has in store for us to expand our knowledge: Slim and Node.js.</p>
+                    near Rome. I am currently studying at the renowned Mayden Academy in Bath to become a Full Stack web developer. I enjoy the highs and lows of coding, especially the time spent in front of a laptop with a good problem to solve. I particularly love the feeling of creating something, whether a product or a service that people can use. I lean towards back-end development, but as a full-stack trainee, I like to get down with front-end apps and creating styles and pages. I feel confident with PHP, MySQL, Javascript, HTML and CSS, and I just started using Sass, Bootstrap, Slim, Node.js and basics of React. I also attended a preparation for the ZCE zend exam at the academy.</p>
                 <p class="about-me-text">I migrated in the UK for a scenery change and worked in casinos for about 3 years before I moved to Bath. Whilst considering other opportunities I remembered how much I had enjoyed the software development I experienced at high school, so decided to apply for the Mayden Academy to help change my career and life! In my free time I like to cook, as a proud Italian, for my friends and girlfriend. I also love relaxing at home watching movies.</p>
             </section>
             <section id="portfolio" class="projects">
@@ -163,11 +163,37 @@ if (!empty($_POST)) {
                         <p class="project-description">
                             Built a simple TODO app that let's you choose
                             a user and create Todos to keep track. I built it
-                            with SLIM and following a MVC architecture.
+                            with SLIM framework and following a MVC architecture.
                         </p>
                         <p class="tags">#PHP #OOP #Slim #MVC</p>
                         <a class="project-link" href="https://github.com/aldofiore28/TODOApp" target="_blank">code</a>
-                        <a class="project-link" href="http://dev.maydenacademy.co.uk/students/2019/feb/aldo/todo-app/public/" target="_blank">project</a>
+                    </div>
+                </article>
+                <article class="project">
+                    <img class="project-image" src="images/academy-portal.jpg" alt="academy portal">
+                    <div class="project-text">
+                        <h1 class="project-title">Academy portal</h1>
+                        <p class="project-description">
+                            Worked on an existing codebase implementing
+                            functionalities to an API to manage the academy
+                            portal. Built with SLIM following an MVC architecture
+                        </p>
+                        <p class="tags">#PHP #OOP #Slim #MVC #API</p>
+                        <a class="project-link" href="https://github.com/Mayden-Academy/AcademyPortal" target="_blank">code</a>
+                        <a class="project-link" href="http://dev.maydenacademy.co.uk/projects/AcademyPortal/public/" target="_blank">project</a>
+                    </div>
+                </article>
+                <article class="project">
+                    <img class="project-image" src="images/api.jpg" alt="academy portal">
+                    <div class="project-text">
+                        <h1 class="project-title">RESTful API</h1>
+                        <p class="project-description">
+                            Built a small RESTful API with Node.js,
+                            trying to follow most of the REST standards
+                            and using MongoDB as my database
+                        </p>
+                        <p class="tags">#Javascript #Node.js #REST #API #MongoDB</p>
+                        <a class="project-link" href="https://github.com/aldofiore28/RESTful_api" target="_blank">code</a>
                     </div>
                 </article>
             </section>
